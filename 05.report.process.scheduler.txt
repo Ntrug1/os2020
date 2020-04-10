@@ -1,0 +1,26 @@
+- input: cat /proc/sched_debug | grep "switches"
+
+  output: 
+    .nr_switches                   : 14406962
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 10985934
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 13881405
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 13743885
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 15087036
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 12938376
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 11404088
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+  .nr_switches                   : 14414307
+ S           task   PID         tree-key  switches  prio     wait-time             sum-exec        sum-sleep
+
+- input: cat /proc/$(pgrep firefox)/sched | grep "switches"
+
+  output: 
+  nr_switches                                  :              2402534
+  nr_voluntary_switches                        :              2389148
+  nr_involuntary_switches                      :                13386
